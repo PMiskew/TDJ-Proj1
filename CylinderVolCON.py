@@ -13,10 +13,14 @@ h = float(input("What is the height: "))
 #Volume = PI*radius^2*height
 
 v = math.pi*r*r*h
+v = round(v,3)
 
 
 
 #Output
-print(v)
+print("Given:")
+print("radius = ",r," units")
+print("height = ",h," units")
+print("The volume is: ",v," units cubed")
 
 print("END PROGRAM")
