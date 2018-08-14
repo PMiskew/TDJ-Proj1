@@ -4,7 +4,7 @@ import math
 class CylinderCalc:
 
 	def __init__(self):
-
+	
 		print("Creating Cylinder Calculator Object")
 
 		self.root = tk.Tk()
@@ -22,15 +22,31 @@ class CylinderCalc:
 		self.enth = tk.Entry(self.root)
 		self.enth.pack();
 
-		self.btn = tk.Button(self.root, text="Calculate")
+		self.btn = tk.Button(self.root, text="Calculate", command=self.calculateVol)
 		self.btn.pack()
 
 		self.output = tk.Text(self.root, height = 10, width=50, borderwidth=3, relief=tk.GROOVE)
 		self.output.config(state="disabled")
 		self.output.pack()
-
-
+		
 		self.root.mainloop();
+
+	def calculateVol(self):
+		print("Calculating Volume")
+		#Get the information from the Entry Objects
+		r = float(self.entr.get())
+		print(r)
+		h = float(self.enth.get())
+
+		v = math.pi*r*r*h
+
+		print(v)
+
+
+
+
+
+		
 
 
 cylinderCalc = CylinderCalc();
